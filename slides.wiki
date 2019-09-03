@@ -1,128 +1,154 @@
-== Section 1 ==
+== Introduction ==
 
 ==== Outline ====
 
 \tableofcontents[currentsection]
 
-==== slide 1 ====
+==== Numba in a Nutshell ====
 
-* bullet 1
-* bullet 2
-* bullet 3
+* A compiler that might make your code faster
+* Requires importing a decorator
+* And decorating functions with it
+* Numba = NumPy + Mamba (fast snake)
 
-==  Section 2 ==
+==== Numba Explained ====
 
-==== Outline ====
+* Numba is a
+** just-in-time
+** type-specializing
+** function compiler
+** for accelerating numerically-focused Python
 
-\tableofcontents[currentsection]
+====  LLVM ====
 
-=== Subsection 1 ===
-
-==== Outline ====
-
-\tableofcontents[currentsection,currentsubsection]
-
-==== Image Slide ====
-
-<[center]
-    <<<images/python-logo.pdf, scale=0.40>>>
-[center]>
-
-==== slide 2 ====
-
-* bullet 1
-* bullet 2
-* bullet 3
-
-=== Subsection 2 ===
-
-==== Outline ====
-
-\tableofcontents[currentsection,currentsubsection]
-
-==== Block ====
-
-<[block]{Block Title}
-Block contents
-[block]>
-
-==== Special Symbols ====
-
-* Tilde: \~{}
-* Tilde: \textasciitilde{}
-* Caret: \^{}
-* Hash: \#
-* Braces: \{\}
-* Dollar: \$
-* Double en: -{}-
-* At in Typewriter: {\tt stash@\{0\} }
-* Exclamation mark in alert: \alert{Attention!}
-
-or use: nowiki
-
-==== Correct Escapes  ====
-
-This only works with my patched version of wiki2beamer.
-
-* @HEAD \@ HEAD@
-* Attention\! Attention\!
-
-==== Verbatim ====[fragile]
-
-\begin{verbatim}
-
-wiki2beamer slides.wiki > slides.wiki.tex
-pdflatex slides.tex
-
-\end{verbatim}
-
-[frame]>
-
-==== Verbatim2 ====[containsverbatim]
-
-<[verbatim]
-
-wiki2beamer slides.wiki > slides.wiki.tex
-pdflatex slides.tex
-
-[verbatim]>
-
-==== Verbatim Block ====[containsverbatim]
-
-<[block]{Verbatim Block}
-<[verbatim]
-
-wiki2beamer slides.wiki > slides.wiki.tex
-pdflatex slides.tex
-
-[verbatim]>
-[block]>
-
-==== Code ====[containsverbatim]
-
-\begin{pycode}
-def python_func(arg):
-    print 'arg was: ', arg
-
-python_func('Hello World!")
-\end{pycode}
-
-==== Code from file ====
-
-\pyfile{code/code.py}
+* LLVM is a compiler toolkit
+* Numba uses it as a compiler backend
+* Access via @llvmlite@
 
 ==== Example ====
 
-<[example]
-    This is an example
-[example]>
+* Sieve of Erastothenes
 
-==== Conclusion ====
+==== Example ====
 
-* Open source tools used to make this presentation:
-** \href{http://wiki2beamer.sourceforge.net/}{Wiki2beamer}
-** \href{http://latex-beamer.sourceforge.net/}{\LaTeX beamer}
-** \href{http://projects.gnome.org/dia/}{Dia}
-** \href{http://pygments.org/}{Pygments}
-** \href{http://code.google.com/p/minted/}{Minted}
-** \href{https://bitbucket.org/john2x/solarized-pygment}{Solarized theme for pygments}
+\pyfile{code/sieve.py}
+
+==== Example ====[containsverbatim]
+
+\begin{ipythonconsolecode}
+In [5]: %timeit sieve.primes.py_func()
+124 ms ± 2.72 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+
+In [6]: %timeit sieve.primes()
+308 µs ± 8.93 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+\end{ipythonconsolecode}
+
+== Going Deeper ==
+
+==== Outline ====
+
+\tableofcontents[currentsection]
+
+==== Numba Flow ====
+
+* INSERT IMAGE
+
+==== Internals ====
+
+* Translate Python objects of supported types into representations with no CPython dependencies ("unboxing")
+* Compile Python bytecode from your decorated function into machine code.
+* Swap calls to builtins and NumPy functions for implementations provided by Numba (or 3rd party Numba extensions)
+* Allow LLVM to inline functions, autovectorize loops, and do other optimizations you would expect from a C compiler
+* When calling the function, release the GIL if requested
+* Convert return values back to Python objects ("boxing")
+
+==== What Numba does not do ====
+
+* Automated translation of CPython or NumPy implementations
+* Automatic compilation of 3rd party libraries
+* Partial compilation
+* Automatic conversion of arbitrary Python types
+* Change the layout of data allocated in the interpreter
+* Translate entire programs
+* Magically make individual NumPy functions faster
+
+==== When is Numba unlikely to help? ====
+
+* Whole program compilation
+* Critical functions have already been converted to C or optimized Cython
+* Need to interface directly to C++
+* Algorithms are not primarily numerical
+* Exception: Numba can do pretty well at bit manipulation
+
+==== Implementing Numpy ====
+
+* Numba does not use any of the NumPy C implementations
+* We implement the NumPy API using Numba compatible/supported Python
+* Treat Numpy as DSL for array oriented computing
+
+==== Implementing Numpy ====
+
+* Implement: @numpy.linalg.norm@
+* For vectors, @ord@ is:
+** @inf@ --> @min(abs(x))@
+** @0  @ --> @sum(x != 0)@
+* Implemented in: @numba.targets.linalg.py@ 
+
+==== Implementing Numpy ====[containsverbatim]
+
+\begin{pycode}
+    elif ord == -np.inf:
+        # min(abs(a))
+        ret = abs(a[0])
+        for k in range(1, n):
+            val = abs(a[k])
+            if val < ret:
+                ret = val
+        return ret
+
+    elif ord == 0:
+        # sum(a != 0)
+        ret = 0.0
+        for k in range(n):
+            if a[k] != 0.:
+                ret += 1.
+        return ret
+\end{pycode}
+
+==== Tips and Tricks ====
+
+* Always use @jit(nopython=True)@
+* (Or @njit@)
+* Prefer Numpy arrays for numerical data
+* Use typed containers from @numba.typed@ for nested data
+* Use small functions, they are inlined
+* @for@ loops are fine
+* Array expressions are fused, so those are fine too
+
+==== OS Support ====
+
+* Windows 7 and later, 32 and 64-bit
+* macOS 10.9 and later, 64-bit
+* Linux (most anything greater than RHEL 5), 32-bit and 64-bit
+
+==== Python versions ====
+
+* Python 2.7, 3.4-3.7
+* NumPy 1.10 and later
+
+==== Hardware Support ====[containsverbatim]
+
+* x86, x86\_64|AMD64 CPUs
+* NVIDIA CUDA GPUs (Compute capability 3.0 and later, CUDA 8.0 and later)
+* AMD GPUs (ROCm on Linux)
+* ARM 32-bit (Raspbery Pi) and 64-bit (Jetson TX2)
+* POWER8|9
+
+==== Packaging ====
+
+* You can depend on Numba to perform the heavy lifting!
+* We run CI on most OS/Python/Hardware combinations
+* You can ship a single source package
+** PyPi
+** anaconda.org
+* No need to pre-compile binaries for your users
