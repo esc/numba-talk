@@ -7,7 +7,7 @@ def primes(max=100000):
     for i in range(2, max):
         if numbers[i] == 0:  # has previously been crossed off
             continue
-        else:  # it is a prime, cross off all mutiples
+        else:  # it is a prime, cross off all multiples
             x = i + i
             while x < max:
                 numbers[x] = 0
