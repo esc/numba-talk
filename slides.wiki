@@ -28,6 +28,7 @@
 ==== Example ====
 
 * Sieve of Erastothenes
+* TODO: need good image
 
 ==== Example ====
 
@@ -43,6 +44,16 @@ In [6]: %timeit sieve.primes()
 308 µs ± 8.93 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
 \end{ipythonconsolecode}
 
+==== Open Source Status ====
+
+* More than 3 companies involved
+** Anaconda
+** Quansight
+** Intel
+** Operator-9
+* Slowly moving towards Numfocus application
+* Issue and PR lists growing
+
 == Going Deeper ==
 
 ==== Outline ====
@@ -51,7 +62,9 @@ In [6]: %timeit sieve.primes()
 
 ==== Numba Flow ====
 
-* INSERT IMAGE
+<[center]
+    <<<images/numba_flowchart.png, scale=0.40>>>
+[center]>
 
 ==== Internals ====
 
@@ -59,6 +72,7 @@ In [6]: %timeit sieve.primes()
 * Compile Python bytecode from your decorated function into machine code.
 * Swap calls to builtins and NumPy functions for implementations provided by Numba (or 3rd party Numba extensions)
 * Allow LLVM to inline functions, autovectorize loops, and do other optimizations you would expect from a C compiler
+* Allow LLVM to exploit all supported instruction sets of your hardware (SSE, AVX)
 * When calling the function, release the GIL if requested
 * Convert return values back to Python objects ("boxing")
 
@@ -79,6 +93,12 @@ In [6]: %timeit sieve.primes()
 * Need to interface directly to C++
 * Algorithms are not primarily numerical
 * Exception: Numba can do pretty well at bit manipulation
+
+== NumPy Support ==
+
+==== Outline ====
+
+\tableofcontents[currentsection]
 
 ==== Implementing Numpy ====
 
@@ -114,6 +134,12 @@ In [6]: %timeit sieve.primes()
                 ret += 1.
         return ret
 \end{pycode}
+
+== Tips and Tricks ==
+
+==== Outline ====
+
+\tableofcontents[currentsection]
 
 ==== Tips and Tricks ====
 
@@ -152,3 +178,33 @@ In [6]: %timeit sieve.primes()
 ** PyPi
 ** anaconda.org
 * No need to pre-compile binaries for your users
+
+== Summary? ==
+
+==== Outline ====
+
+\tableofcontents[currentsection]
+
+==== Understood Numba? ====
+
+* Numba is a
+** just-in-time
+** type-specializing
+** function compiler
+** for accelerating numerically-focused Python
+
+==== What is Cooking? ====
+
+* Dropping Python 2.7 support
+* Python --> Assembly visualizer
+* Automatic inspection of Numpy Support
+* Scipy + Numba (aka Scumba)
+* Numba-integration-testing (TexasBBQ)
+* AirDask-CI
+
+==== Getting in Touch ====
+
+* https://numba.pydata.org
+* Preferred: GitHub + Gitter
+
+* Stuck? It can't hurt to ask. ;-)
