@@ -159,6 +159,22 @@ $ python code/typed.py
 [[0, 1, 2, 3, 4], [23, 23, 23, 23, 23, 23, 23, 23, 23, 23]]
 \end{consolecode}
 
+==== Fused Expressions ====[containsverbatim]
+
+\pyfile{code/fused.py}
+
+==== Fused Expressions ====[containsverbatim]
+
+\begin{ipythonconsolecode}
+In [1]: from fused import a,b,func
+
+In [2]: %timeit func.py_func(a,b)
+4.68 ms ± 89.7 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+
+In [3]: %timeit func(a,b)
+626 µs ± 22.4 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+\end{ipythonconsolecode}
+
 ==== OS Support ====
 
 * Windows 7 and later, 32 and 64-bit
