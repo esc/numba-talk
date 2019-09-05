@@ -147,6 +147,18 @@ In [6]: %timeit sieve.primes()
 * @for@ loops are fine
 * Array expressions are fused, so those are fine too
 
+==== Typed Containers ====[containsverbatim]
+
+\pyfile{code/typed.py}
+
+==== Typed Containers ====[containsverbatim]
+
+\begin{consolecode}
+$ python code/typed.py
+[[0, 1, 2, 3, 4], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]]
+[[0, 1, 2, 3, 4], [23, 23, 23, 23, 23, 23, 23, 23, 23, 23]]
+\end{consolecode}
+
 ==== OS Support ====
 
 * Windows 7 and later, 32 and 64-bit
