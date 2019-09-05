@@ -47,7 +47,7 @@ In [6]: %timeit sieve.primes()
 * Several companies and many open source contributors
 ** 4 FTE funded to contribute to Numba between Anaconda, Intel, Quansight, and others
 ** 7-12 non-core contributors per release (~ every 2 months)
-* Slowly moving towards Numfocus application
+* Slowly moving towards NumFocus application
 * Issue and PR lists growing
 
 == Going Deeper ==
