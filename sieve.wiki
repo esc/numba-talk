@@ -1,0 +1,1264 @@
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-0.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-1.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-2.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-3.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-4.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-5.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-6.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-7.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-8.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-9.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-10.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-11.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-12.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-13.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-14.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-15.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-16.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-17.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-18.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-19.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-20.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-21.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-22.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-23.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-24.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-25.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-26.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-27.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-28.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-29.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-30.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-31.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-32.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-33.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-34.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-35.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-36.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-37.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-38.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-39.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-40.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-41.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-42.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-43.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-44.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-45.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-46.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-47.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-48.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-49.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-50.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-51.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-52.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-53.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-54.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-55.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-56.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-57.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-58.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-59.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-60.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-61.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-62.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-63.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-64.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-65.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-66.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-67.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-68.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-69.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-70.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-71.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-72.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-73.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-74.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-75.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-76.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-77.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-78.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-79.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-80.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-81.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-82.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-83.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-84.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-85.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-86.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-87.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-88.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-89.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-90.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-91.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-92.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-93.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-94.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-95.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-96.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-97.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-98.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-99.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-100.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-101.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-102.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-103.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-104.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-105.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-106.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-107.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-108.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-109.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-110.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-111.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-112.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-113.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-114.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-115.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-116.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-117.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-118.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-119.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-120.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-121.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-122.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-123.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-124.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-125.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-126.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-127.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-128.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-129.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-130.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-131.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-132.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-133.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-134.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-135.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-136.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-137.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-138.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-139.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-140.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-141.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-142.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-143.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-144.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-145.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-146.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-147.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-148.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-149.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-150.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-151.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-152.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-153.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-154.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-155.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-156.png, scale=0.50>>>
+[center]>
+
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-157.png, scale=0.50>>>
+[center]>
+

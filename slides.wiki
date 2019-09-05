@@ -25,10 +25,8 @@
 * Numba uses it as a compiler backend
 * Access via @llvmlite@
 
-==== Example ====
+>>>sieve.wiki<<<
 
-* Sieve of Erastothenes
-* TODO: need good image
 
 ==== Example ====
 
