@@ -16,13 +16,14 @@ type-specializing, function compiler for accelerating numerically-focused
 Python. Numba can compile the computationally intensive functions of your
 numerical programs and libraries from Python/NumPy to highly optimized binary
 code. It does this by inferring the data types used inside these functions and
-uses that information to generate code that is specific to those data types
-and specialised for your target hardware. On top of that, it does all of this
+uses that information to generate code that is specific to those data types and
+specialised for your target hardware. On top of that, it does all of this
 on-the-fly---or just-in-time---as your program runs. This significantly reduces
 the potential complexity that traditionally comes with pre-compiling and
 shipping numerical code for a variety of operating systems, Python versions and
-hardware architectures. All you need in principle, is to `conda install numba`
-and decorate your compute intensive functions with `@njit`!
+hardware architectures. All you need in principle, is to
+``conda install numba`` and decorate your compute intensive functions with
+``@njit``!
 
 This talk will equip you with a mental model of how Numba is implemented and
 how it works at the algorithmic level. You will gain a deeper understanding of
@@ -36,7 +37,7 @@ in your program or library.
 Speaker-Bio
 ===========
 
-`esc` is a long-time "Python for Data" user and developer who still remembers
+``esc`` is a long-time "Python for Data" user and developer who still remembers
 hearing Travis Oliphant's keynote at the EuroScipy 2007. This was during a time
 where he first became aware of the nascent scientific Python stack. He started
 using Python for simple modeling of spiking neurons and evaluation of data from
