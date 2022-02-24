@@ -55,8 +55,9 @@ project.
 Past Events
 ===========
 
-* EuroScipy 2019 `website <https://pretalx.com/euroscipy-2019/talk/EDNVGJ/>`_,
-  `recording <https://www.youtube.com/watch?v=WQ1ybsGUkyk>`_ and `slides <https://github.com/esc/numba-talk/blob/master/2019-09-05-euroscipy-haenel-numba.pdf>`_.
+* EuroScipy 2019 :: `website <https://pretalx.com/euroscipy-2019/talk/EDNVGJ/>`_,
+  `recording <https://www.youtube.com/watch?v=WQ1ybsGUkyk>`_ and
+  `slides <https://github.com/esc/numba-talk/blob/master/2019-09-05-euroscipy-haenel-numba.pdf>`_.
 
 Dependencies
 ============
