@@ -99,7 +99,7 @@ In [6]: %timeit sieve.primes()
 * Whole program compilation
 * Critical functions have already been converted to C or optimized Cython
 * Need to interface directly to C++
-* Algorithms are not primarily numerical
+* Algorithms are not primarily numerical, e.g. strings
 * Exception: Numba can do pretty well at bit manipulation
 
 == NumPy Support ==
@@ -201,10 +201,10 @@ In [3]: %timeit func(a,b)
 ==== Hardware Support ====[containsverbatim]
 
 * x86, x86\_64|AMD64 CPUs
-* NVIDIA CUDA GPUs (Compute capability 3.0 and later, CUDA 8.0 and later)
-* AMD GPUs (ROCm on Linux)
+* NVIDIA CUDA GPUs (Compute capability 5.3 and later, CUDA 11.2 and later)
 * ARM 32-bit (Raspbery Pi) and 64-bit (Jetson TX2)
 * POWER8|9
+* Apple M1 Silison (in progress)
 
 ==== Packaging ====
 
