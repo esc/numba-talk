@@ -226,6 +226,41 @@ In [3]: %timeit func(a,b)
 ** anaconda.org
 * No need to pre-compile binaries for your users
 
+== Compiler Toolkit ==
+
+==== Outline ====
+
+\tableofcontents[currentsection]
+
+==== @inspect@ methods ====[containsverbatim]
+
+* There are various @inspect@ methods on compiled functions
+** @inspect\_types@  --> Printout results from type-inference
+** @inspect\_llvm@   --> Obtain LLVM IR representation
+** @inspect\_asm@    --> Obtain assembly representation
+** @inspect\_cfg@    --> Obtain Control Flow Graph
+** @inspect\_dissam\_cfg@  --> Reversed Control Flow Graph from generated ELF
+
+==== Custom Compiler Passes ====
+
+\pyfile{code/new_pass.py}
+
+==== Custom Compiler Passes ====
+
+\pyfile{code/new_pass_code.py}
+
+==== Custom Compiler Passes ====
+
+\pyfile{code/pipeline.py}
+
+==== Custom Compiler Passes ====
+
+\pyfile{code/use_pipeline.py}
+
+==== Outline ====
+
+\tableofcontents[currentsection]
+
 == Summary? ==
 
 ==== Outline ====
