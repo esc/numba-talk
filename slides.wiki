@@ -10,6 +10,12 @@
 
 \tableofcontents[currentsection]
 
+==== Numba ====
+
+<[center]
+    <<<images/numba-logo.pdf, scale=0.20>>>
+[center]>
+
 ==== Numba in a Nutshell ====
 
 * A compiler that might make your code faster
