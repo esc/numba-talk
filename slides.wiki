@@ -206,8 +206,8 @@ In [3]: %timeit func(a,b)
 
 ==== Python versions ====
 
-* Python 2.7, 3.4-3.7
-* NumPy 1.10 and later
+* Python 3.7 - 3.10 (3.11 being worked on)
+* NumPy 1.18 and later
 
 ==== Hardware Support ====[containsverbatim]
 
