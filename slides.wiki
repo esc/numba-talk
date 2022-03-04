@@ -56,10 +56,11 @@ In [6]: %timeit sieve.primes()
 ==== Open Source Status ====
 
 * Several companies and many open source contributors
-** 4 FTE funded to contribute to Numba between Anaconda, Intel, Quansight, and others
-** 7-12 non-core contributors per release (~ every 2 months)
+** 5 FTE funded to contribute to Numba between Anaconda, Intel, Quansight, Nvidia, Bodo.ai and others
+** 7-12 non-core contributors per release (~ every 3 months)
 * Slowly moving towards NumFocus application
 * Issue and PR lists growing
+* Very active community on GitHub, Discourse and Gitter
 
 == Going Deeper ==
 
