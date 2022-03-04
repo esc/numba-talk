@@ -1,5 +1,11 @@
 == Introduction ==
 
+==== @whoami@ ====
+
+* Compiler Engineer at Anaconda
+* Working on Numba full-time
+* Doing this since three years
+
 ==== Outline ====
 
 \tableofcontents[currentsection]
