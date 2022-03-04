@@ -280,7 +280,7 @@ In [3]: %timeit func(a,b)
 * Dropping Python 2.7 support
 * Python --> Assembly visualizer
 * Automatic inspection of Numpy Support
-* Scipy + Numba (aka Scumba)
+* Scipy + Numba = @numba-scipy@
 * Numba-integration-testing (TexasBBQ)
 * AirDask-CI
 
