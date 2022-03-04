@@ -1,5 +1,5 @@
 base = slides
-slidefilename = haenel-euroscipy2019-numb
+slidefilename = haenel-numba
 
 .PHONY: git-sha
 

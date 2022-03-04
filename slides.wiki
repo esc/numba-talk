@@ -215,7 +215,7 @@ In [3]: %timeit func(a,b)
 * NVIDIA CUDA GPUs (Compute capability 5.3 and later, CUDA 11.2 and later)
 * ARM 32-bit (Raspbery Pi) and 64-bit (Jetson TX2)
 * POWER8|9
-* Apple M1 Silison (in progress)
+* Apple M1 Silicon (in progress)
 
 ==== Packaging ====
 
@@ -285,6 +285,6 @@ In [3]: %timeit func(a,b)
 ==== Getting in Touch ====
 
 * https://numba.pydata.org
-* Preferred: GitHub + Gitter
+* Preferred: GitHub + Gitter + Discourse
 
 * Stuck? It can't hurt to ask. ;-)
