@@ -37,8 +37,7 @@
 * Numba uses it as a compiler backend
 * Access via @llvmlite@
 
->>>sieve.wiki<<<
-
+>>>sieve_short.wiki<<<
 
 ==== Example ====
 

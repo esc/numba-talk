@@ -1,0 +1,8 @@
+==== Example ====
+
+* Sieve of Erastothenes
+
+<[center]
+    <<<images/sieve-158.png, scale=0.50>>>
+[center]>
+
