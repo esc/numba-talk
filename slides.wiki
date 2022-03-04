@@ -62,6 +62,17 @@ In [6]: %timeit sieve.primes()
 * Issue and PR lists growing
 * Very active community on GitHub, Discourse and Gitter
 
+
+==== Community Usage ====
+
+* Millions of Downloads per month
+* On GitHub about 50k repositories have an @import numba@
+* Several high-profile libraries use it:
+** PyData Sparse --> sparse matrix implementation
+** UMAP --> Uniform Manifold Approximation
+** Tardis --> Super Nova Simulator
+** many, many more
+
 == Going Deeper ==
 
 ==== Outline ====
