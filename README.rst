@@ -58,6 +58,8 @@ recently, the compiler frontend.
 Past Events
 ===========
 
+* Turchin Seminar 2022-03-04 :: Presented Numba to Andrei Klimov and others as
+  part of the Turchin Seminar
 * EuroScipy 2019 :: `website <https://pretalx.com/euroscipy-2019/talk/EDNVGJ/>`_, and
   `slides <https://github.com/esc/numba-talk/blob/main/pdf/2019-09-05-euroscipy-haenel-numba.pdf>`_.
 
