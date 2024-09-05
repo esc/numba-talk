@@ -59,7 +59,7 @@ Past Events
 ===========
 
 * EuroScipy 2019 :: `website <https://pretalx.com/euroscipy-2019/talk/EDNVGJ/>`_, and
-  `slides <https://github.com/esc/numba-talk/blob/master/2019-09-05-euroscipy-haenel-numba.pdf>`_.
+  `slides <https://github.com/esc/numba-talk/blob/main/pdf/2019-09-05-euroscipy-haenel-numba.pdf>`_.
 
 Dependencies
 ============
