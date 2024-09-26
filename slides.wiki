@@ -4,7 +4,11 @@
 
 * Compiler Engineer at Anaconda
 * Working on Numba full-time
-* Doing this since three years
+* Doing this since over 5 years
+* Actively involved in:
+** Typed containers
+** Release and community management
+** Compiler frontend design and implementation
 
 ==== Outline ====
 
