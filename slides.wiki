@@ -64,7 +64,7 @@ In [6]: %timeit sieve.primes()
 ** 7-12 non-core contributors per release (~ every 3 months)
 * Slowly moving towards NumFocus application
 * Issue and PR lists growing
-* Very active community on GitHub, Discourse and Gitter
+* Very active community on GitHub, Discourse and Matrix/Gitter
 
 
 ==== Community Usage ====
@@ -75,7 +75,7 @@ In [6]: %timeit sieve.primes()
 ** PyData Sparse --> sparse matrix implementation
 ** UMAP --> Uniform Manifold Approximation
 ** Tardis --> Super Nova Simulator
-** many, many more
+** many, many more, we eventually stopped keeping track
 
 == Going Deeper ==
 
@@ -250,21 +250,14 @@ In [3]: %timeit func(a,b)
 ==== OS and Hardware Support ====
 
 * Windows 7 and later 64-bit only
-* macOS 10.9 and later, @x86\_64@ and @arm064@
-* Linux (most anything greater than RHEL 5) @x86\_64@ and @aarch64@
+* macOS 10.9 and later, @x86\_64@ (Intel) and @arm64@ (M1, M2 etc...)
+* Linux (most anything greater than RHEL 5) @x86\_64@ and @aarch64@ (no * @ppc64le@ anymore)
 * NVIDIA CUDA GPUs (Compute capability 5.3 and later, CUDA 11.2 and later)
 ** --> currently being refactored into seperate package @numba-cuda@
 
 ==== Python versions ====
 
 * Python 3.10 - 3.13 as of Numba 0.62 and llvmlite 0.43
-* NumPy YYY
-
-==== Hardware Support ====[containsverbatim]
-
-* x86\_64|AMD64 CPUs
-* ARM 64-bit (@aarch64@)
-* Apple M1 (@arm64@)
 
 ==== Packaging ====
 
@@ -327,18 +320,17 @@ In [3]: %timeit func(a,b)
 ==== What is Cooking? ====
 
 * AST/Source based frontend
+* RVSDG based lambda-calculus intermediary representation
+* Hindley-Milner style type inference
+* EggLog/Equality saturation
 * PIXIE backend format
 * Transition from MCJIT --> ORCJIT
-* Compiler modularization: `numba-cuda` and `numba-numpy` 
+* Compiler modularization: `numba-cuda` and `numba-numpy`
 * Refactoring to support NumPy 2.0 type system
-* Hindley-Milner style type inference
-* EggLog 
-* Effectively: complete project overhaul
 
-* 3.11 and a new bytecode analyser
-* Python --> Assembly visualizer
-* Automatic inspection of NumPy Support
-* Scipy + Numba = @numba-scipy@
+--0.5cm--
+
+* Effectively: complete project overhaul
 
 ==== Getting in Touch ====
 
