@@ -148,9 +148,9 @@ In [6]: %timeit sieve.primes()
 * Numba team creates two types of packages, wheels and conda packages
 * The Numba team statically distributes LLVM
 * Python wheels for distribution via PyPi
-** 20 * 30-40MB
+** @20 * 30-40 MB@
 * Conda packages for distribution via the @numba@ channel on anaconda.org
-** XXX MB
+** @25 * 20-40 MB@
 * Other distributors choose to link dynamically
 * (This often creates issues for distributors, since they also only want to support one LLVM version, usually not the one we support but the latest)
 * Hot take: LLVM is not a shared library -- but something to be vendored
