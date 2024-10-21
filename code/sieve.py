@@ -1,8 +1,8 @@
 import numpy as np
-from numba import jit
+from numba import njit
 
 
-@jit(nopython=True)  # simply add the jit decorator
+@njit  # simply add the njit decorator
 def primes(max=100000):
     numbers = np.ones(max, dtype=np.uint8)  # initialize the boolean sieve
     for i in range(2, max):
