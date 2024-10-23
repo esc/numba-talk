@@ -249,7 +249,7 @@ In [3]: %timeit func(a,b)
 
 * Windows 7 and later 64-bit only
 * macOS 10.9 and later, @x86\_64@ (Intel) and @arm64@ (M1, M2 etc...)
-* Linux (most anything greater than RHEL 5) @x86\_64@ and @aarch64@ (no * @ppc64le@ anymore)
+* Linux (most anything greater than RHEL 5) @x86\_64@ and @aarch64@ (no @ppc64le@ anymore)
 * NVIDIA CUDA GPUs (Compute capability 5.3 and later, CUDA 11.2 and later)
 ** --> currently being refactored into seperate package @numba-cuda@
 
