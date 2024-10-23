@@ -297,11 +297,7 @@ In [3]: %timeit func(a,b)
 
 \pyfile{code/use_pipeline.py}
 
-==== Outline ====
-
-\tableofcontents[currentsection]
-
-== Summary? ==
+== Summary ==
 
 ==== Outline ====
 
