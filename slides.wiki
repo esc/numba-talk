@@ -148,7 +148,7 @@ In [6]: %timeit sieve.primes()
 
 * Numba team creates two types of packages, wheels and conda packages
 * The Numba team statically distributes LLVM
-* Python wheels for distribution via PyPi
+* Python wheels for distribution via PyPI
 ** @20 * 30-40 MB@
 * Conda packages for distribution via the @numba@ channel on anaconda.org
 ** @25 * 20-40 MB@
@@ -263,7 +263,7 @@ In [3]: %timeit func(a,b)
 ==== Packaging ====
 
 * You can depend on Numba to perform the heavy lifting!
-* We run CI on most OS/Python/Hardware combinations
+* We run CI on most Python/NumPy/OS/Hardware combinations
 * You can ship a single source package
 ** PyPi
 ** anaconda.org
@@ -278,11 +278,11 @@ In [3]: %timeit func(a,b)
 ==== @inspect@ methods ====[containsverbatim]
 
 * There are various @inspect@ methods on compiled functions
-** @inspect\_types@  --> Printout results from type-inference
-** @inspect\_llvm@   --> Obtain LLVM IR representation
-** @inspect\_asm@    --> Obtain assembly representation
+** @inspect\_types@  --> Prints out results from type-inference
+** @inspect\_llvm@   --> Obtain LLVM IR
+** @inspect\_asm@    --> Obtain print out of function assembly
 ** @inspect\_cfg@    --> Obtain Control Flow Graph
-** @inspect\_dissam\_cfg@  --> Reversed Control Flow Graph from generated ELF
+** @inspect\_dissam\_cfg@  --> Control Flow Graph and disassembly from reversing generated ELF
 
 ==== Custom Compiler Passes ====
 
@@ -319,8 +319,8 @@ In [3]: %timeit func(a,b)
 * AST/Source based frontend
 * RVSDG based lambda-calculus intermediary representation
 * Hindley-Milner style type inference
-* EggLog/Equality saturation
-* PIXIE backend format
+* egglog/Equality saturation
+* PIXIE based backend, toolchain and executable format
 * Transition from MCJIT --> ORCJIT
 * Compiler modularization: `numba-cuda` and `numba-numpy`
 * Refactoring to support NumPy 2.0 type system
@@ -332,6 +332,8 @@ In [3]: %timeit func(a,b)
 ==== Getting in Touch ====
 
 * https://numba.pydata.org
+* https://github.com/numba
+* https://numba.discourse.group/
 * Preferred: GitHub + Gitter + Discourse
 
 * Stuck? It can't hurt to ask. ;-)
