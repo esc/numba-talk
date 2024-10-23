@@ -4,7 +4,11 @@
 
 * Compiler Engineer at Anaconda
 * Working on Numba full-time
-* Doing this since three years
+* Doing this since over 5 years
+* Actively involved in:
+** Typed containers
+** Release and community management
+** Compiler frontend design and implementation
 
 ==== Outline ====
 
@@ -19,7 +23,7 @@
 ==== Numba in a Nutshell ====
 
 * A compiler that might make your code faster
-* Requires importing a decorator
+* Requires importing a decorator: @\@njit@
 * And decorating functions with it
 * Numba = NumPy + Mamba (fast snake)
 
@@ -57,21 +61,19 @@ In [6]: %timeit sieve.primes()
 
 * Several companies and many open source contributors
 ** 5 FTE funded to contribute to Numba between Anaconda, Intel, Quansight, Nvidia, Bodo.ai and others
-** 7-12 non-core contributors per release (~ every 3 months)
-* Slowly moving towards NumFocus application
+** 7-12 non-core contributors per release
 * Issue and PR lists growing
-* Very active community on GitHub, Discourse and Gitter
-
+* Very active community on GitHub, Discourse and Matrix/Gitter
 
 ==== Community Usage ====
 
 * Millions of Downloads per month
-* On GitHub about 50k repositories have an @import numba@
+* On GitHub about 120k repositories are listed as dependents (Oct 2024)
 * Several high-profile libraries use it:
 ** PyData Sparse --> sparse matrix implementation
 ** UMAP --> Uniform Manifold Approximation
 ** Tardis --> Super Nova Simulator
-** many, many more
+** many, many more, we eventually stopped keeping track
 
 == Going Deeper ==
 
@@ -112,6 +114,52 @@ In [6]: %timeit sieve.primes()
 * Need to interface directly to C++
 * Algorithms are not primarily numerical, e.g. strings
 * Exception: Numba can do pretty well at bit manipulation
+
+== @llvmlite@ ==
+
+==== Outline ====
+
+\tableofcontents[currentsection]
+
+==== @llvmlite@ ====
+
+* Numba's LLVM binding package
+* A "lightweight" Python wrapper
+* Not exactly intended as a standalone package, but a few people use it anayway
+* Separation of concerns, easier to develop this way
+* Uses the C++ API via C -- easier to bind to from Python
+* Stability is key, we only upgrade LLVM if necessary, don't chase the bleeding edge
+
+==== @llvmlite@ releases ====
+
+* Released in lock-step with Numba
+* About two to four times a year
+* Each release only supports one (sometimes two) LLVM versions
+** --> several disgruntled users
+* Currently we support 14 but transitioning to 15
+* ZERO-based versioning
+* Patch releases only to fix severe regressions
+* No backports
+
+==== @llvmlite@ packages ====
+
+* Numba team creates two types of packages, wheels and conda packages
+* The Numba team statically distributes LLVM
+* Python wheels for distribution via PyPi
+** @20 * 30-40 MB@
+* Conda packages for distribution via the @numba@ channel on anaconda.org
+** @25 * 20-40 MB@
+* Other distributors choose to link dynamically
+* (This often creates issues for distributors, since they also only want to support one LLVM version, usually not the one we support but the latest)
+* Hot take: LLVM is not a shared library -- but something to be vendored
+
+==== Why not @llvmpy@ ====
+
+* llvmlite comes from an era of LLVM 3.something
+* Stability was more important, Numba is the main consumer
+* Only the JIT part of LLVM needed (MCJIT)
+* For example: our builder-api is entirely in Python and string based
+* Better to control the bindings ourselves
 
 == NumPy Support ==
 
@@ -162,8 +210,7 @@ In [6]: %timeit sieve.primes()
 
 ==== Tips and Tricks ====
 
-* Always use @jit(nopython=True)@
-* (Or @njit@)
+* Always use @njit
 * Prefer Numpy arrays for numerical data
 * Use typed containers from @numba.typed@ for nested data
 * Use small functions, they are inlined
@@ -198,24 +245,17 @@ In [3]: %timeit func(a,b)
 626 µs ± 22.4 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
 \end{ipythonconsolecode}
 
-==== OS Support ====
+==== OS and Hardware Support ====
 
-* Windows 7 and later, 32 and 64-bit
-* macOS 10.9 and later, 64-bit
-* Linux (most anything greater than RHEL 5), 32-bit and 64-bit
+* Windows 7 and later 64-bit only
+* macOS 10.9 and later, @x86\_64@ (Intel) and @arm64@ (M1, M2 etc...)
+* Linux (most anything greater than RHEL 5) @x86\_64@ and @aarch64@ (no @ppc64le@ anymore)
+* NVIDIA CUDA GPUs (Compute capability 5.3 and later, CUDA 11.2 and later)
+** --> currently being refactored into seperate package @numba-cuda@
 
 ==== Python versions ====
 
-* Python 3.7 - 3.10 (3.11 being worked on)
-* NumPy 1.18 and later
-
-==== Hardware Support ====[containsverbatim]
-
-* x86, x86\_64|AMD64 CPUs
-* NVIDIA CUDA GPUs (Compute capability 5.3 and later, CUDA 11.2 and later)
-* ARM 32-bit (Raspbery Pi) and 64-bit (Jetson TX2)
-* POWER8|9
-* Apple M1 Silicon (in progress)
+* Python 3.10 - 3.13 as of Numba 0.62 and llvmlite 0.43
 
 ==== Packaging ====
 
@@ -257,11 +297,7 @@ In [3]: %timeit func(a,b)
 
 \pyfile{code/use_pipeline.py}
 
-==== Outline ====
-
-\tableofcontents[currentsection]
-
-== Summary? ==
+== Summary ==
 
 ==== Outline ====
 
@@ -277,10 +313,18 @@ In [3]: %timeit func(a,b)
 
 ==== What is Cooking? ====
 
-* 3.11 and a new bytecode analyser
-* Python --> Assembly visualizer
-* Automatic inspection of Numpy Support
-* Scipy + Numba = @numba-scipy@
+* AST/Source based frontend
+* RVSDG based lambda-calculus intermediary representation
+* Hindley-Milner style type inference
+* EggLog/Equality saturation
+* PIXIE backend format
+* Transition from MCJIT --> ORCJIT
+* Compiler modularization: `numba-cuda` and `numba-numpy`
+* Refactoring to support NumPy 2.0 type system
+
+--0.5cm--
+
+* Effectively: complete project overhaul
 
 ==== Getting in Touch ====
 
