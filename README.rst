@@ -58,10 +58,19 @@ recently, the compiler frontend.
 Past Events
 ===========
 
-* Turchin Seminar 2022-03-04 :: Presented Numba to Andrei Klimov and others as
-  part of the Turchin Seminar (Online) :: `slides <https://github.com/esc/numba-talk/blob/main/pdf/2022-03-04-turchin-seminar-haenel-numba.pdf>`_
-* EuroScipy 2019 :: `website <https://pretalx.com/euroscipy-2019/talk/EDNVGJ/>`_, and
-  `slides <https://github.com/esc/numba-talk/blob/main/pdf/2019-09-05-euroscipy-haenel-numba.pdf>`_.
+* Berlin LLVM Social :: 2024-10-23 :: Presented Numba at the LLVM Social Meetup Berlin -- with a special focus on `llvmlite`
+
+  * `website <https://www.meetup.com/llvm-social-berlin/events/303365447/?eventOrigin=group_events_list>`_
+  * `slides <https://github.com/esc/numba-talk/blob/main/pdf/2024-10-23-llvm-berlin-meetup.pdf>`_ 
+
+* Turchin Seminar :: 2022-03-04 :: Presented Numba to Andrei Klimov and others as part of the Turchin Seminar (Online)
+
+  * `slides <https://github.com/esc/numba-talk/blob/main/pdf/2022-03-04-turchin-seminar-haenel-numba.pdf>`_
+
+* EuroScipy 2019 :: 2019-09-05
+
+  * `website <https://pretalx.com/euroscipy-2019/talk/EDNVGJ/>`_
+  * `slides <https://github.com/esc/numba-talk/blob/main/pdf/2019-09-05-euroscipy-haenel-numba.pdf>`_
 
 Dependencies
 ============
