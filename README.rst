@@ -4,12 +4,15 @@ Numba Talk
 
 My Numba talk.
 
-Abstract
-========
+Summary
+=======
 
 In this talk I will take you on a whirlwind tour of Numba and you will be
 quipped with a mental model of how Numba works and what it is good at. At the
 end, you will be able to decide if Numba could be useful for you.
+
+Abstract
+========
 
 In this talk I will take you on a whirlwind tour of Numba, the just-in-time,
 type-specializing, function compiler for accelerating numerically-focused
