@@ -84,6 +84,7 @@ The talk is made with:
 * `wiki2beamer <http://wiki2beamer.sourceforge.net/>`_ (included in repository)
 * `LaTeX Beamer <https://bitbucket.org/rivanvx/beamer/wiki/Home>`_
 * `Pygments <http://pygments.org/>`_
+* `ipython-pygments-lexers <https://github.com/ipython/ipython-pygments-lexers>`_
 * `Minted <http://code.google.com/p/minted/>`_ (included in repository)
 * `ccBeamer <http://blog.hartwork.org/?p=52>`_ (included in repository)
 
