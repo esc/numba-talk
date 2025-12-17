@@ -7,9 +7,10 @@ My Numba talk.
 Summary
 =======
 
-In this talk I will take you on a whirlwind tour of Numba and you will be
-quipped with a mental model of how Numba works and what it is good at. At the
-end, you will be able to decide if Numba could be useful for you.
+In this talk I will take you on a whirlwind tour of Numba -- the Python
+just-in-time (JIT) compiler. I will equip you with  with a mental model of how
+Numba works and what it is good at. At the end, you will be able to decide if
+Numba could be useful for you.
 
 Abstract
 ========
