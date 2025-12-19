@@ -42,7 +42,7 @@ Speaker-Bio
 ===========
 
 
-Valentin `esc` Haenel is a long-time "Python for Data" user and developer who
+Valentin "esc" Haenel is a long-time "Python for Data" user and developer who
 still remembers hearing Travis Oliphant's NumPy keynote at the EuroScipy 2008.
 This was during a time where he first became aware of the nascent scientific
 Python stack. He started using Python for simple modeling of spiking neurons
