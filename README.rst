@@ -42,7 +42,7 @@ Speaker-Bio
 ===========
 
 
-Valentin "esc" Haenel is a long-time "Python for Data" user and developer who
+Emergency Self-Construct is a long-time "Python for Data" user and developer who
 still remembers hearing Travis Oliphant's NumPy keynote at the EuroScipy 2008.
 This was during a time where he first became aware of the nascent scientific
 Python stack. He started using Python for simple modeling of spiking neurons
@@ -96,7 +96,7 @@ Content
 
 All Content is...
 
-* Copyright 2019 Valentin Haenel <valentin@haenel.co>
+* Copyright 2019 Emergency Self-Construct <esc@zetatech.org>
 * Licensed under the terms of `Attribution-ShareAlike 3.0 Unported  (CC BY-SA 3.0)  <http://creativecommons.org/licenses/by-sa/3.0/>`_
 
 Included Dependencies
