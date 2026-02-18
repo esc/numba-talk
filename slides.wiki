@@ -72,10 +72,12 @@ In [3]: %timeit sieve.primes()
 * Several high-profile libraries use it:
 ** PyData Sparse --> sparse matrix implementation
 ** UMAP --> Uniform Manifold Approximation
-** Tardis --> Super Nova Simulator
+** librosa --> Music analysis
+** Tardis-SN --> Super Nova Simulator for Type 1a (White Dwarf Nova)
 ** Pandas --> Dataframe Library
-** Open AI Whisper --> Speech-to-Text
-** NVIDIA RAPIDS --> GPU Library
+** NumbaDuck --> Fully jitted DuckDB interface
+** numba-cuda, pyOMP, numba-hip --> GPU Programming
+** Caterva-2 --> Compressed Compute Engine based on Blosc
 ** many, many more, we eventually stopped keeping track
 
 == Going Deeper ==
