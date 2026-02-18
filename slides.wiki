@@ -440,6 +440,6 @@ In [3]: %timeit func(a,b)
 * https://numba.pydata.org
 * https://github.com/numba
 * https://numba.discourse.group/
-* Preferred: GitHub + Gitter + Discourse
+* Preferred: GitHub + Discourse
 
 * Stuck? It can't hurt to ask. ;-)
