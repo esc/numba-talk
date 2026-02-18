@@ -225,6 +225,13 @@ In [3]: %timeit func(a,b)
 ** PyPi
 ** anaconda.org
 * No need to pre-compile binaries for your users
+* Reduced code needed for distribution
+
+==== Testing ====
+
+* Ported CI from custom server farm to GHA last year
+* Testing matrix is a cross-product: Python x NumPy x Platform
+* GHA runs for 12 hours on a single commit during release process
 
 == Compiler Toolkit ==
 
