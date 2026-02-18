@@ -4,11 +4,11 @@
 
 * Senior Software Engineer at Anaconda
 * Working on Numba full-time
-* Doing this for over 5 years
+* Doing this for almost 7 years
 * Actively involved in:
 ** Typed containers
 ** Release and community management
-** Compiler frontend design and implementation
+** Structured Control Flow Graphs
 
 ==== Outline ====
 
