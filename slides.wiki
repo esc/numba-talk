@@ -51,10 +51,10 @@
 
 \begin{ipythonconsolecode}
 In [2]: %timeit sieve.primes.py_func()
-11.8 ms ± 109 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+11.8 ms ± 109 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 
 In [3]: %timeit sieve.primes()
-177 μs ± 11.2 μs per loop (mean ± std. dev. of 7 runs, 1 loop each)
+177 µs ± 11.2 µs per loop (mean ± std. dev. of 7 runs, 1 loop each)
 \end{ipythonconsolecode}
 
 ==== Open Source Status ====
