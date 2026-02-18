@@ -1,0 +1,158 @@
+== @llvmlite@ ==
+
+==== Outline ====
+
+\tableofcontents[currentsection]
+
+==== @llvmlite@ ====
+
+* Numba's LLVM binding package
+* A "lightweight" Python wrapper
+* Not exactly intended as a standalone package, but a few people use it anyway
+* Separation of concerns, easier to develop this way
+* Uses the C++ API via C -- easier to bind to from Python
+* Stability is key, we only upgrade LLVM if necessary, don't chase the bleeding edge
+
+==== @llvmlite@ releases ====
+
+* Released in lock-step with Numba
+* About two to four times a year
+* Each release only supports one (sometimes two) LLVM versions
+** --> several disgruntled users
+* Currently we support 14 but transitioning to 15
+* ZERO-based versioning
+* Patch releases only to fix severe regressions
+* No backports
+
+==== @llvmlite@ packages ====
+
+* Numba team creates two types of packages, wheels and conda packages
+* The Numba team statically distributes LLVM
+* Python wheels for distribution via PyPI
+** @20 * 30-40 MB@
+* Conda packages for distribution via the @numba@ channel on anaconda.org
+** @25 * 20-40 MB@
+* Other distributors choose to link dynamically
+* (This often creates issues for distributors, since they also only want to support one LLVM version, usually not the one we support but the latest)
+* Hot take: LLVM is not a shared library -- but something to be vendored
+
+==== Why not @llvmpy@ ====
+
+* llvmlite comes from an era of LLVM 3.something
+* Stability was more important, Numba is the main consumer
+* Only the JIT part of LLVM needed (MCJIT)
+* For example: our builder-API is entirely in Python and string based
+* Better to control the bindings ourselves
+
+==== Builder-API Example ====[containsverbatim]
+
+\pyfile{code/builder.py}
+
+==== Builder-API Example ====[containsverbatim]
+
+\begin{pycode}
+; ModuleID = "examples/ir_fpadd.py"
+target triple = "unknown-unknown-unknown"
+target datalayout = ""
+
+define double @"fpadd"(double %".1", double %".2")
+{
+entry:
+  %"res" = fadd double %".1", %".2"
+  ret double %"res"
+}
+\end{pycode}
+
+==== Code Generation Example ====[containsverbatim]
+
+<[nowiki]
+\begin{pycode}
+from __future__ import print_function
+
+from ctypes import CFUNCTYPE, c_double
+
+import llvmlite.binding as llvm
+
+
+# All these initializations are required for code generation!
+llvm.initialize()
+llvm.initialize_native_target()
+llvm.initialize_native_asmprinter()  # yes, even this one
+\end{pycode}
+[nowiki]>
+
+==== Code Generation Example ====[containsverbatim]
+
+<[nowiki]
+\begin{pycode}
+llvm_ir = """
+   ; ModuleID = "examples/ir_fpadd.py"
+   target triple = "unknown-unknown-unknown"
+   target datalayout = ""
+
+   define double @"fpadd"(double %".1", double %".2")
+   {
+   entry:
+     %"res" = fadd double %".1", %".2"
+     ret double %"res"
+   }
+   """
+\end{pycode}
+[nowiki]>
+
+==== Code Generation Example ====[containsverbatim]
+
+<[nowiki]
+\begin{pycode}
+def create_execution_engine():
+    """
+    Create an ExecutionEngine suitable for JIT code generation on
+    the host CPU.  The engine is reusable for an arbitrary number of
+    modules.
+    """
+    # Create a target machine representing the host
+    target = llvm.Target.from_default_triple()
+    target_machine = target.create_target_machine()
+    # And an execution engine with an empty backing module
+    backing_mod = llvm.parse_assembly("")
+    engine = llvm.create_mcjit_compiler(backing_mod, target_machine)
+    return engine
+\end{pycode}
+[nowiki]>
+
+==== Code Generation Example ====[containsverbatim]
+
+<[nowiki]
+\begin{pycode}
+def compile_ir(engine, llvm_ir):
+    """
+    Compile the LLVM IR string with the given engine.
+    The compiled module object is returned.
+    """
+    # Create a LLVM module object from the IR
+    mod = llvm.parse_assembly(llvm_ir)
+    mod.verify()
+    # Now add the module and make sure it is ready for execution
+    engine.add_module(mod)
+    engine.finalize_object()
+    engine.run_static_constructors()
+    return mod
+\end{pycode}
+[nowiki]>
+
+==== Code Generation Example ====[containsverbatim]
+
+<[nowiki]
+\begin{pycode}
+engine = create_execution_engine()
+mod = compile_ir(engine, llvm_ir)
+
+# Look up the function pointer (a Python int)
+func_ptr = engine.get_function_address("fpadd")
+
+# Run the function via ctypes
+cfunc = CFUNCTYPE(c_double, c_double, c_double)(func_ptr)
+res = cfunc(1.0, 3.5)
+print("fpadd(...) =", res)
+\end{pycode}
+[nowiki]>
