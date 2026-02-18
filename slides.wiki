@@ -429,18 +429,9 @@ In [3]: %timeit func(a,b)
 
 ==== What is Cooking? ====
 
-* AST/Source based frontend
-* RVSDG based lambda-calculus intermediary representation
-* Hindley-Milner style type inference
-* egglog/Equality saturation
+* Currently in a PR cleanup, hoping to reduce number of open PRs
+* Next gen: numbacc compiler based on Equality Saturation
 * PIXIE based backend, toolchain and executable format
-* Transition from MCJIT --> ORCJIT
-* Compiler modularization: `numba-cuda` and `numba-numpy`
-* Refactoring to support NumPy 2.0 type system
-
---0.5cm--
-
-* Effectively: complete project overhaul
 
 ==== Getting in Touch ====
 
