@@ -60,15 +60,15 @@ In [6]: %timeit sieve.primes()
 ==== Open Source Status ====
 
 * Several companies and many open source contributors
-** 5 FTE funded to contribute to Numba between Anaconda, Intel, Quansight, Nvidia and others
-** 7-12 non-core contributors per release
+** several FTE funded to contribute to Numba
+** several non-core contributors per release
 * Issue and PR lists growing
-* Very active community on GitHub, Discourse and Matrix/Gitter
+* Very active community on GitHub, Discourse
 
 ==== Community Usage ====
 
-* 10s of Millions of Downloads per month
-* On GitHub about 120k repositories are listed as dependents (Oct 2024)
+* Download rate via PyPi is \textasciitilde21 Hz (audible by goldfish)
+* GitHub: 163126 Repositories and 6513 Packages
 * Several high-profile libraries use it:
 ** PyData Sparse --> sparse matrix implementation
 ** UMAP --> Uniform Manifold Approximation
