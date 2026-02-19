@@ -4,11 +4,11 @@
 
 * Senior Software Engineer at Anaconda
 * Working on Numba full-time
-* Doing this for over 5 years
+* Doing this for almost 7 years
 * Actively involved in:
 ** Typed containers
 ** Release and community management
-** Compiler frontend design and implementation
+** Structured Control Flow Graphs
 
 ==== Outline ====
 
@@ -50,32 +50,34 @@
 ==== Example ====[containsverbatim]
 
 \begin{ipythonconsolecode}
-In [5]: %timeit sieve.primes.py_func()
-124 ms ± 2.72 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+In [2]: %timeit sieve.primes.py_func()
+11.8 ms ± 109 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 
-In [6]: %timeit sieve.primes()
-308 µs ± 8.93 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+In [3]: %timeit sieve.primes()
+177 µs ± 11.2 µs per loop (mean ± std. dev. of 7 runs, 1 loop each)
 \end{ipythonconsolecode}
 
 ==== Open Source Status ====
 
 * Several companies and many open source contributors
-** 5 FTE funded to contribute to Numba between Anaconda, Intel, Quansight, Nvidia and others
-** 7-12 non-core contributors per release
+** several FTE funded to contribute to Numba
+** several non-core contributors per release
 * Issue and PR lists growing
-* Very active community on GitHub, Discourse and Matrix/Gitter
+* Very active community on GitHub, Discourse
 
 ==== Community Usage ====
 
-* 10s of Millions of Downloads per month
-* On GitHub about 120k repositories are listed as dependents (Oct 2024)
+* Download rate via PyPi is \textasciitilde21 Hz (audible by goldfish)
+* GitHub: 163126 Repositories and 6513 Packages
 * Several high-profile libraries use it:
 ** PyData Sparse --> sparse matrix implementation
 ** UMAP --> Uniform Manifold Approximation
-** Tardis --> Super Nova Simulator
+** librosa --> Music analysis
+** Tardis-SN --> Super Nova Simulator for Type 1a (White Dwarf Nova)
 ** Pandas --> Dataframe Library
-** Open AI Whisper --> Speech-to-Text
-** NVIDIA RAPIDS --> GPU Library
+** NumbaDuck --> Fully jitted DuckDB interface
+** numba-cuda, pyOMP, numba-hip --> GPU Programming
+** Caterva-2 --> Compressed Compute Engine based on Blosc
 ** many, many more, we eventually stopped keeping track
 
 == Going Deeper ==
@@ -118,164 +120,7 @@ In [6]: %timeit sieve.primes()
 * Algorithms that are not primarily numerical, e.g. string manipulation
 * Exception: Numba can do pretty well at bit manipulation
 
-== @llvmlite@ ==
-
-==== Outline ====
-
-\tableofcontents[currentsection]
-
-==== @llvmlite@ ====
-
-* Numba's LLVM binding package
-* A "lightweight" Python wrapper
-* Not exactly intended as a standalone package, but a few people use it anyway
-* Separation of concerns, easier to develop this way
-* Uses the C++ API via C -- easier to bind to from Python
-* Stability is key, we only upgrade LLVM if necessary, don't chase the bleeding edge
-
-==== @llvmlite@ releases ====
-
-* Released in lock-step with Numba
-* About two to four times a year
-* Each release only supports one (sometimes two) LLVM versions
-** --> several disgruntled users
-* Currently we support 14 but transitioning to 15
-* ZERO-based versioning
-* Patch releases only to fix severe regressions
-* No backports
-
-==== @llvmlite@ packages ====
-
-* Numba team creates two types of packages, wheels and conda packages
-* The Numba team statically distributes LLVM
-* Python wheels for distribution via PyPI
-** @20 * 30-40 MB@
-* Conda packages for distribution via the @numba@ channel on anaconda.org
-** @25 * 20-40 MB@
-* Other distributors choose to link dynamically
-* (This often creates issues for distributors, since they also only want to support one LLVM version, usually not the one we support but the latest)
-* Hot take: LLVM is not a shared library -- but something to be vendored
-
-==== Why not @llvmpy@ ====
-
-* llvmlite comes from an era of LLVM 3.something
-* Stability was more important, Numba is the main consumer
-* Only the JIT part of LLVM needed (MCJIT)
-* For example: our builder-API is entirely in Python and string based
-* Better to control the bindings ourselves
-
-==== Builder-API Example ====[containsverbatim]
-
-\pyfile{code/builder.py}
-
-==== Builder-API Example ====[containsverbatim]
-
-\begin{pycode}
-; ModuleID = "examples/ir_fpadd.py"
-target triple = "unknown-unknown-unknown"
-target datalayout = ""
-
-define double @"fpadd"(double %".1", double %".2")
-{
-entry:
-  %"res" = fadd double %".1", %".2"
-  ret double %"res"
-}
-\end{pycode}
-
-==== Code Generation Example ====[containsverbatim]
-
-<[nowiki]
-\begin{pycode}
-from __future__ import print_function
-
-from ctypes import CFUNCTYPE, c_double
-
-import llvmlite.binding as llvm
-
-
-# All these initializations are required for code generation!
-llvm.initialize()
-llvm.initialize_native_target()
-llvm.initialize_native_asmprinter()  # yes, even this one
-\end{pycode}
-[nowiki]>
-
-==== Code Generation Example ====[containsverbatim]
-
-<[nowiki]
-\begin{pycode}
-llvm_ir = """
-   ; ModuleID = "examples/ir_fpadd.py"
-   target triple = "unknown-unknown-unknown"
-   target datalayout = ""
-
-   define double @"fpadd"(double %".1", double %".2")
-   {
-   entry:
-     %"res" = fadd double %".1", %".2"
-     ret double %"res"
-   }
-   """
-\end{pycode}
-[nowiki]>
-
-==== Code Generation Example ====[containsverbatim]
-
-<[nowiki]
-\begin{pycode}
-def create_execution_engine():
-    """
-    Create an ExecutionEngine suitable for JIT code generation on
-    the host CPU.  The engine is reusable for an arbitrary number of
-    modules.
-    """
-    # Create a target machine representing the host
-    target = llvm.Target.from_default_triple()
-    target_machine = target.create_target_machine()
-    # And an execution engine with an empty backing module
-    backing_mod = llvm.parse_assembly("")
-    engine = llvm.create_mcjit_compiler(backing_mod, target_machine)
-    return engine
-\end{pycode}
-[nowiki]>
-
-==== Code Generation Example ====[containsverbatim]
-
-<[nowiki]
-\begin{pycode}
-def compile_ir(engine, llvm_ir):
-    """
-    Compile the LLVM IR string with the given engine.
-    The compiled module object is returned.
-    """
-    # Create a LLVM module object from the IR
-    mod = llvm.parse_assembly(llvm_ir)
-    mod.verify()
-    # Now add the module and make sure it is ready for execution
-    engine.add_module(mod)
-    engine.finalize_object()
-    engine.run_static_constructors()
-    return mod
-\end{pycode}
-[nowiki]>
-
-==== Code Generation Example ====[containsverbatim]
-
-<[nowiki]
-\begin{pycode}
-engine = create_execution_engine()
-mod = compile_ir(engine, llvm_ir)
-
-# Look up the function pointer (a Python int)
-func_ptr = engine.get_function_address("fpadd")
-
-# Run the function via ctypes
-cfunc = CFUNCTYPE(c_double, c_double, c_double)(func_ptr)
-res = cfunc(1.0, 3.5)
-print("fpadd(...) =", res)
-\end{pycode}
-[nowiki]>
+% >>>llvmlite.wiki<<<
 
 == NumPy Support ==
 
@@ -363,15 +208,14 @@ In [3]: %timeit func(a,b)
 
 ==== OS and Hardware Support ====
 
-* Windows 7 and later 64-bit only
-* macOS 10.9 and later, @x86\_64@ (Intel) and @arm64@ (M1, M2 etc...)
-* Linux @x86\_64@ and @aarch64@ (no @ppc64le@ anymore)
-* NVIDIA CUDA GPUs (Compute capability 5.3 and later, CUDA 11.2 and later)
-** --> currently being refactored into separate package @numba-cuda@
+* @osx-arm64@
+* @linux-64@
+* @linux-aarch64@
+* @win-64@
 
 ==== Python versions ====
 
-* Python 3.10 - 3.13 as of Numba 0.62 and llvmlite 0.43
+* Python 3.10 - 3.14 as of Numba 0.64 and llvmlite 0.46
 
 ==== Packaging ====
 
@@ -381,6 +225,13 @@ In [3]: %timeit func(a,b)
 ** PyPi
 ** anaconda.org
 * No need to pre-compile binaries for your users
+* Reduced code needed for distribution
+
+==== Testing ====
+
+* Ported CI from custom server farm to GHA last year
+* Testing matrix is a cross-product: Python x NumPy x Platform
+* GHA runs for 12 hours on a single commit during release process
 
 == Compiler Toolkit ==
 
@@ -429,24 +280,15 @@ In [3]: %timeit func(a,b)
 
 ==== What is Cooking? ====
 
-* AST/Source based frontend
-* RVSDG based lambda-calculus intermediary representation
-* Hindley-Milner style type inference
-* egglog/Equality saturation
+* Currently in a PR cleanup, hoping to reduce number of open PRs
+* Next gen: numbacc compiler based on Equality Saturation
 * PIXIE based backend, toolchain and executable format
-* Transition from MCJIT --> ORCJIT
-* Compiler modularization: `numba-cuda` and `numba-numpy`
-* Refactoring to support NumPy 2.0 type system
-
---0.5cm--
-
-* Effectively: complete project overhaul
 
 ==== Getting in Touch ====
 
 * https://numba.pydata.org
 * https://github.com/numba
 * https://numba.discourse.group/
-* Preferred: GitHub + Gitter + Discourse
+* Preferred: GitHub + Discourse
 
 * Stuck? It can't hurt to ask. ;-)
