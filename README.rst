@@ -62,6 +62,11 @@ recently, the compiler frontend.
 Past Events
 ===========
 
+* Berlin Python Users :: 2026-02-19 :: Presented the talk as "A Whirlwind Tour of Numba
+
+  * `website <https://www.meetup.com/python-users-berlin-pub/events/312958754/>`_
+  * `slides <https://github.com/esc/numba-talk/blob/main/pdf/2026-02-19-python-users-berlin-haenel-numba.pdf>`_
+
 * Berlin LLVM Social :: 2024-10-23 :: Presented Numba at the LLVM Social Meetup Berlin -- with a special focus on `llvmlite`
 
   * `website <https://www.meetup.com/llvm-social-berlin/events/303365447/?eventOrigin=group_events_list>`_
